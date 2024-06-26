@@ -7,7 +7,6 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
@@ -38,4 +37,12 @@ public class BlogPost {
     @JoinColumn(name = "id_author")
     private Author author;
 
+    public BlogPost(String category, String title, String cover, String content, int times, Author author) {
+        this.category = category;
+        this.title = title;
+        this.cover = cover;
+        this.content = content;
+        this.times = times;
+        this.author = author;
+    }
 }
